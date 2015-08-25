@@ -6,13 +6,13 @@
 /*   By: yrypert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/25 17:12:37 by yrypert           #+#    #+#             */
-/*   Updated: 2015/08/25 17:44:44 by yrypert          ###   ########.fr       */
+/*   Updated: 2015/08/26 00:16:04 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 
-int ct_tablen(char **str)
+int CT_tablen(char **str)
 {
 	int c;
 
@@ -24,5 +24,4 @@ int ct_tablen(char **str)
 	}
 	return (c);
 }
-
 

@@ -6,7 +6,7 @@
 /*   By: mburte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/25 23:55:46 by mburte            #+#    #+#             */
-/*   Updated: 2015/08/26 00:01:22 by mburte           ###   ########.fr       */
+/*   Updated: 2015/08/26 00:13:26 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #define BUFF_SIZE 4096
 
-int ct_tablen(char **tab);
+int CT_tablen(char **tab);
 char **IO_read(char *file);
 
 #endif
