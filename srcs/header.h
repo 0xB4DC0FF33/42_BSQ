@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   inputOutput.c                                      :+:      :+:    :+:   */
+/*   header.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mburte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/08/25 16:27:01 by mburte            #+#    #+#             */
-/*   Updated: 2015/08/25 23:55:35 by mburte           ###   ########.fr       */
+/*   Created: 2015/08/25 23:55:46 by mburte            #+#    #+#             */
+/*   Updated: 2015/08/26 00:01:22 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
+#ifndef HEADER_H
+#define HEADER_H
 
-char **IO_read(char *file)
-{
-	char buff[BUFF_SIZE + 1];
-	int fd;
+#define BUFF_SIZE 4096
 
-	fd = open(file, O_RDONLY);
-	
-}
+int ct_tablen(char **tab);
+char **IO_read(char *file);
+
+#endif
