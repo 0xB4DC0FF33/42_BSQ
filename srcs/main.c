@@ -6,19 +6,19 @@
 /*   By: mburte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/25 14:25:06 by mburte            #+#    #+#             */
-/*   Updated: 2015/08/25 16:21:32 by mburte           ###   ########.fr       */
+/*   Updated: 2015/08/25 17:23:45 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int main(int argc, char **argv)
 {
-	FILE  *file;
+	char  *file;
 	int i;
 
 	i = 1;
 	if (argc == 1)
 	{
-		file = STDIN_FILENO
+		file = "stdinput";
 		IO_read(file);
 	}
 	else if (argc == 2)

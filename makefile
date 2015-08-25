@@ -6,7 +6,7 @@
 #    By: mburte <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/08/24 14:23:20 by mburte            #+#    #+#              #
-#    Updated: 2015/08/25 12:07:38 by mburte           ###   ########.fr        #
+#    Updated: 2015/08/25 17:57:20 by mburte           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ launch : compile
 
 generate : clean
 	touch $(GRID)
-	./$(PERL) > $(GRID)
+	./$(PERL) 100 150 5 > $(GRID)
 
 clean :
 	rm -f $(GRID)
