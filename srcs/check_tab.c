@@ -6,7 +6,7 @@
 /*   By: yrypert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/25 17:12:37 by yrypert           #+#    #+#             */
-/*   Updated: 2015/08/26 00:16:04 by mburte           ###   ########.fr       */
+/*   Updated: 2015/08/27 00:33:19 by yrypert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,28 @@ int CT_tablen(char **str)
 	return (c);
 }
 
+char **ct_strtotab(char	*str)
+{
+	char	**tab;
+	int		x;
+	int		y;
+	int		i;
+
+	x = 0;
+	y = 0;
+	i = 0;
+
+	while(str[i] != '\0')
+	{
+		tab[x][y] = str[i];
+		y++;
+		i++;
+		if (tab[x][y] =='\n')
+		{
+			tab[x][y] = '\0';
+			y++;
+			x = 0;
+		}
+	}
+	return (0);
+}
