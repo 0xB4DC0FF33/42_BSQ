@@ -6,7 +6,7 @@
 /*   By: yrypert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/25 17:12:37 by yrypert           #+#    #+#             */
-/*   Updated: 2015/08/27 02:43:15 by mburte           ###   ########.fr       */
+/*   Updated: 2015/08/27 05:09:56 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,46 @@ char **ct_strtotab(char	*str)
 			x = 0;
 		}
 	}
-	return (0);
+	return (tab);
 }
 
 void ct_AquireCharset(char *str)
 {
+	char *buffer;
 	char empty;
 	char square;
 	char block;
 	int width;
 	int i;
 
-	
+	i = 0;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		buffer[i] = str[i];
+		i++;
+	}
+	width = ft_atoi(buffer);
+	i++;
+	empty = str[i];
+	i++;
+	block = str[i];
+	i++;
+	square = str[i];
+	str = ct_strclean(str)
 
+
+}
+
+char *ct_strclean(char *str)
+{
+	int i;
+	char *newstr;
+
+	i = 3;
+	while (str[i] != '\0')
+	{
+		newstr[i - 3] = str[i];
+		i++;
+	}
+	return(newstr);
 }
