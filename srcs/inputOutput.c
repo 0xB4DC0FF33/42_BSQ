@@ -6,7 +6,7 @@
 /*   By: mburte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/25 16:27:01 by mburte            #+#    #+#             */
-/*   Updated: 2015/08/27 08:15:06 by mburte           ###   ########.fr       */
+/*   Updated: 2015/08/27 19:31:45 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <fcntl.h>
 #include <errno.h>
 
-int io_open(char *file)
+int		io_open(char *file)
 {
 	int fd;
 
@@ -31,12 +31,13 @@ int io_open(char *file)
 	}
 	else
 	{
-		IO_read(fd);
+		io_read(fd);
+		close(fd);
 		return(fd);
 	}
 }
 
-char *io_read(int fd)
+char	*io_read(int fd)
 {
 	char buf[BUFF_SIZE + 1];
 	char *str;
@@ -50,6 +51,20 @@ char *io_read(int fd)
 	{
 		str = read(fd, buf, BUFF_SIZE);
 	}
-	ct_AquireChars(str);
+	ct_acquirechars(str, 0);
 	return (str);
+}
+
+int		io_print(char **grid, int wid)
+{
+	int y;
+
+	y = 0;
+	while (y <= wid)
+	{
+		ft_putstr(*grid[y]);
+		y++;
+	}
+}
+
 
