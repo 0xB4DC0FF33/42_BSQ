@@ -6,7 +6,11 @@
 /*   By: mburte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/25 16:27:01 by mburte            #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2015/08/27 19:31:45 by mburte           ###   ########.fr       */
+=======
+/*   Updated: 2015/08/27 10:07:47 by mburte           ###   ########.fr       */
+>>>>>>> 6213bcebbb1f98b979159c023f50a3ae428e41ab
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +48,13 @@ char	*io_read(int fd)
 
 	if (read(fd, buf, BUFF_SIZE) == -1)
 	{
-		ft_putstr(errno);
+		ft_putstr(errno);(
 		return(0);
 	}
 	else
 	{
 		str = read(fd, buf, BUFF_SIZE);
-	}
+	}(
 	ct_acquirechars(str, 0);
 	return (str);
 }
@@ -66,5 +70,4 @@ int		io_print(char **grid, int wid)
 		y++;
 	}
 }
-
 
