@@ -6,7 +6,7 @@
 /*   By: yrypert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/25 17:12:37 by yrypert           #+#    #+#             */
-/*   Updated: 2015/08/27 05:09:56 by mburte           ###   ########.fr       */
+/*   Updated: 2015/08/27 08:15:11 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char **ct_strtotab(char	*str)
 	return (tab);
 }
 
-void ct_AquireCharset(char *str)
+void ct_AquireChars(char *str)
 {
 	char *buffer;
 	char empty;
@@ -71,7 +71,7 @@ void ct_AquireCharset(char *str)
 	block = str[i];
 	i++;
 	square = str[i];
-	str = ct_strclean(str)
+	str = ct_strclean(str);
 
 
 }
