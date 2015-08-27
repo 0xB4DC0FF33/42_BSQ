@@ -6,13 +6,11 @@
 /*   By: yrypert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/25 17:12:37 by yrypert           #+#    #+#             */
-/*   Updated: 2015/08/27 00:33:19 by yrypert          ###   ########.fr       */
+/*   Updated: 2015/08/27 02:43:15 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-int CT_tablen(char **str)
+int ct_tablen(char **str)
 {
 	int c;
 
@@ -49,4 +47,16 @@ char **ct_strtotab(char	*str)
 		}
 	}
 	return (0);
+}
+
+void ct_AquireCharset(char *str)
+{
+	char empty;
+	char square;
+	char block;
+	int width;
+	int i;
+
+	
+
 }
