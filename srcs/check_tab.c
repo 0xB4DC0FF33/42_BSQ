@@ -6,11 +6,11 @@
 /*   By: yrypert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/25 17:12:37 by yrypert           #+#    #+#             */
-/*   Updated: 2015/08/27 08:15:11 by mburte           ###   ########.fr       */
+/*   Updated: 2015/08/27 10:13:10 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ct_tablen(char **str)
+int		ct_tablen(char **str)
 {
 	int c;
 
@@ -23,7 +23,7 @@ int ct_tablen(char **str)
 	return (c);
 }
 
-char **ct_strtotab(char	*str)
+char	**ct_strtotab(char *str)
 {
 	char	**tab;
 	int		x;
@@ -33,13 +33,12 @@ char **ct_strtotab(char	*str)
 	x = 0;
 	y = 0;
 	i = 0;
-
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		tab[x][y] = str[i];
 		y++;
 		i++;
-		if (tab[x][y] =='\n')
+		if (tab[x][y] == '\n')
 		{
 			tab[x][y] = '\0';
 			y++;
@@ -49,16 +48,14 @@ char **ct_strtotab(char	*str)
 	return (tab);
 }
 
-void ct_AquireChars(char *str)
+void	ct_acquirechars(char *str, int i)
 {
 	char *buffer;
 	char empty;
 	char square;
 	char block;
 	int width;
-	int i;
 
-	i = 0;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		buffer[i] = str[i];
@@ -72,11 +69,9 @@ void ct_AquireChars(char *str)
 	i++;
 	square = str[i];
 	str = ct_strclean(str);
-
-
 }
 
-char *ct_strclean(char *str)
+char	*ct_strclean(char *str)
 {
 	int i;
 	char *newstr;
@@ -87,5 +82,5 @@ char *ct_strclean(char *str)
 		newstr[i - 3] = str[i];
 		i++;
 	}
-	return(newstr);
+	return (newstr);
 }

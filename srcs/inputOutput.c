@@ -6,7 +6,7 @@
 /*   By: mburte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/25 16:27:01 by mburte            #+#    #+#             */
-/*   Updated: 2015/08/27 08:15:06 by mburte           ###   ########.fr       */
+/*   Updated: 2015/08/27 10:07:47 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ char *io_read(int fd)
 	{
 		str = read(fd, buf, BUFF_SIZE);
 	}
-	ct_AquireChars(str);
+	ct_acquirechars(str, 0);
 	return (str);
-
+}

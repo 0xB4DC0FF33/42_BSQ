@@ -6,11 +6,11 @@
 /*   By: mburte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/27 06:56:51 by mburte            #+#    #+#             */
-/*   Updated: 2015/08/27 09:34:42 by mburte           ###   ########.fr       */
+/*   Updated: 2015/08/27 11:44:08 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char **sf_gridprep(char *str, char block, char empty, int wid, char sqr)
+void sf_gridprep(char *str, char block, char empty, int wid, char sqr)
 {
 	char **table;
 	int **grid;
@@ -37,21 +37,27 @@ char **sf_gridprep(char *str, char block, char empty, int wid, char sqr)
 
 void sf_core(int **grid, char block, char empty, int wid, char sqr)
 {
-	int tmp;
-	int max;
-	int maxX;
-	int maxY;
-	int x;
-	int y;
-
-	y = 2;
-	x = 2;
-	while(y <= wid)
+	t_shrk.y = 2;
+	t_shrk.x = 2;
+	t_shrk.max = 0;
+	while(t_shrk.y <= wid)
 	{
-		while(grid[y][x] != '\0')
+		while(grid[t_shrk.y][t_shrk.x] != '\0')
 		{
-			
+			if (grid[t_shrk.y][t_shrk.x] != empty)
+			{
+				grid[t_shrk.y][t_shrk.x] = sf_count(grid, t_shrk.x, t_shrk.y);
+				if (grid[t_shrk.y][t_shrk.x] > t_shrk.max)
+				{
+					t_shrk.max = grid[t_shrk.y][t_shrk.x];
+					t_shrk.maxx = t_shrk.x;
+					t_shrk.maxy = t_shrk.y;
+				}
+			}
+			t_shrk.x++;
 		}
+		t_shrk.y++;
+		t_shrk.x = 0;
 	}
 }
 
@@ -59,10 +65,10 @@ int sf_count(int **grid, int x, int y)
 {
 	int tmp;
 
-	tmp = grid[y-1][x];
-	if (grid[y-1][x-1] <= tmp)
-		tmp = grid[y-1][x-1];
-	if (grid[y][x-1] <= tmp)
-		tmp = grid[y][x-1];
+	tmp = grid[y - 1][x];
+	if (grid[y - 1][x - 1] <= tmp)
+		tmp = grid[y - 1][x - 1];
+	if (grid[y][x - 1] <= tmp)
+		tmp = grid[y][x - 1];
 	return (tmp + 1);
 }
