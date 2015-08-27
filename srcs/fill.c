@@ -6,7 +6,7 @@
 /*   By: yrypert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/27 20:42:58 by yrypert           #+#    #+#             */
-/*   Updated: 2015/08/27 21:56:14 by yrypert          ###   ########.fr       */
+/*   Updated: 2015/08/27 22:09:22 by yrypert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,24 @@
 
 void	fill(char **tab, int	x, int	y, int	max, char	square )
 {
+	int	i;
+	int	j;
 
-	while (tab[x] != '\0' && tab[y] != '\0')
+	i = 0;
+	j = 0;
+	x = x - max;
+	y = y - max;
+
+
+	while (i <= max)
 	{
-		if (tab[x] == max)
+		while (j <= max)
 		{
-		printf("%d", square);
-		x++;
+			tab[y][x] = square;
+			j++;
+			x++;
 		}
-		if (tab[y] == max) 
-		{
-		printf("%d", square);
-		y++;
-		}
-
+	i++;
+	y++;
 	}
-
 }
