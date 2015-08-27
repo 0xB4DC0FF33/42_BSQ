@@ -6,11 +6,7 @@
 /*   By: mburte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/25 23:55:46 by mburte            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2015/08/27 11:44:14 by mburte           ###   ########.fr       */
-=======
-/*   Updated: 2015/08/27 12:14:25 by mburte           ###   ########.fr       */
->>>>>>> 6213bcebbb1f98b979159c023f50a3ae428e41ab
+/*   Updated: 2015/08/27 22:44:13 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +22,18 @@ char *ct_strclean(char *str);
 
 int io_open(char *file);
 int io_read(int fd);
+int io_print(char *grid);
 
+int ft_strlen(char *str);
 int ft_power(int nb, int pow);
 int ft_atoi(char str);
-int ft_putstr(char *str);
+void ft_putstr(char *str);
+
+void sf_gridprep(char *str, char block, char empty, int wid, char sqr);
+void sf_core(int **grid, char block, char empty, int wid, char sqr);
+int sf_count(int **grid, int x, int y);
+
+void	fill(char **tab, int	x, int	y, int	max, char	square );
 
 typedef struct	s_stock
 {
