@@ -6,7 +6,7 @@
 /*   By: mburte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/27 06:56:51 by mburte            #+#    #+#             */
-/*   Updated: 2015/08/27 22:44:18 by mburte           ###   ########.fr       */
+/*   Updated: 2015/08/27 23:15:26 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void sf_gridprep(char *str, char block, char empty, int wid, char sqr)
 
 	j = 0;
 	i = 0;
+	str = ct_strclean(str);
 	grid = ct_strtotab(str);
 	while (j <= wid)
 	{
@@ -33,9 +34,10 @@ void sf_gridprep(char *str, char block, char empty, int wid, char sqr)
 			i++;
 		}
 	}
+	sf_core(grid, block, empty, wid, sqr, table);
 }
 
-void sf_core(int **grid, char block, char empty, int wid, char sqr)
+void sf_core(int **grid, char block, char empty, int wid, char sqr, char **tab)
 {
 	t_shrk.y = 2;
 	t_shrk.x = 2;
@@ -59,6 +61,7 @@ void sf_core(int **grid, char block, char empty, int wid, char sqr)
 		t_shrk.y++;
 		t_shrk.x = 0;
 	}
+	fill(tab, t_shrk.maxx, t_shrk.maxy, t_shrk.max, char sqr);
 }
 
 int sf_count(int **grid, int x, int y)

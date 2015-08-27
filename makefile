@@ -6,11 +6,16 @@
 #    By: mburte <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/08/24 14:23:20 by mburte            #+#    #+#              #
-#    Updated: 2015/08/25 17:57:20 by mburte           ###   ########.fr        #
+#    Updated: 2015/08/27 23:18:12 by mburte           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =
+SRCS = check_tab.c\
+	   fill.c\
+	   ft.c\
+	   inputOutput.c\
+	   main.c\
+	   square_finder.c
 
 NAME = bsq
 

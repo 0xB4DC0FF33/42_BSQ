@@ -6,7 +6,7 @@
 /*   By: yrypert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/27 20:42:58 by yrypert           #+#    #+#             */
-/*   Updated: 2015/08/27 22:44:23 by mburte           ###   ########.fr       */
+/*   Updated: 2015/08/27 23:15:15 by mburte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,5 @@ void	fill(char **tab, int	x, int	y, int	max, char	square )
 	i++;
 	y++;
 	}
+	io_print(tab);
 }
