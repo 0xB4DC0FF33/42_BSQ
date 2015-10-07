@@ -1,5 +1,7 @@
 README
 
+/*******PAS FINI*******/
+
 Voici le BSQ !
 le but etant de créer un programme qui trouve le plus grand carré dans une grille générée aléatoirement,
 pour cela le Makefile suffit a compiler et a generer la grille,
